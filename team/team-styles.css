@@ -1,0 +1,259 @@
+/* Team Member Page Styles */
+.team-member {
+    padding: 120px 0 80px;
+}
+
+.team-member-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.team-member-img {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.team-member-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.team-member-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.team-member-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.team-member-info .position {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--light-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--primary-color);
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    transform: translateY(-3px);
+}
+
+.team-member-content {
+    margin-bottom: 40px;
+}
+
+.team-member-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.team-member-content h2::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    bottom: 0;
+    left: 0;
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.skills-section {
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.skill-category {
+    background-color: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.skill-category h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skill-category li::before {
+    content: '•';
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+}
+
+.experience-section {
+    margin-bottom: 40px;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+}
+
+.experience-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.experience-item .company {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.experience-item .period {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.projects-section {
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--light-bg);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    margin-bottom: 20px;
+}
+
+.tech-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-used span {
+    background-color: rgba(67, 97, 238, 0.1);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.back-to-team {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.back-to-team .btn i {
+    margin-right: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-member {
+        padding: 100px 0 60px;
+    }
+    
+    .team-member-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .team-member-img {
+        margin: 0 auto;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .team-member-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .team-member-content h2 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
