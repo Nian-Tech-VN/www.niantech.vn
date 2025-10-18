@@ -423,12 +423,34 @@ section {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
 }
 
-.tech-icon i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+.tech-icon:hover {
+    transform: translateY(-5px);
+    background-color: rgba(67, 97, 238, 0.05);
+}
+
+.tech-logo {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin: 0 auto 10px;
+    filter: invert(40%) sepia(54%) saturate(2259%) hue-rotate(213deg) brightness(95%) contrast(95%);
+    transition: transform 0.3s ease;
+}
+
+.tech-icon:hover .tech-logo {
+    transform: scale(1.1);
+}
+
+.tech-icon span {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 /* Team Section */
